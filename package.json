@@ -1,0 +1,12 @@
+{
+  "name": "colvr-project-page",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Static research homepage for CoLVR",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs",
+    "check": "node --check app.js && node --check scripts/serve.mjs"
+  }
+}

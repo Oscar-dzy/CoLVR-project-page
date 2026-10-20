@@ -1,0 +1,10 @@
+.paper-source/
+tmp/
+node_modules/
+*.log
+.DS_Store
+
+# Local paper review and asset preparation (not part of the public website).
+docs/paper-analysis.md
+scripts/prepare_assets.py
+assets/institutions/shlab.webp

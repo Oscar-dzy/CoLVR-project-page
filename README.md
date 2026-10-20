@@ -62,7 +62,7 @@ Keep the PDF figures alongside the images so that the original-figure links rema
 ```bibtex
 @inproceedings{ding2026colvr,
   title = {CoLVR: Enhancing Exploratory Latent Visual Reasoning via Contrastive Optimization},
-  author = {Ding, Ziyang and Meng, Linjian and Wu, Yiming and Li, Yuhan and Liu, Yuhao and Zhao, Zhen},
+  author = {Ziyang Ding and Linjian Meng and Yiming Wu and Yuhan Li and Yuhao Liu and Zhen Zhao},
   booktitle = {The Fortieth Annual Conference on Neural Information Processing Systems},
   year = {2026},
   url = {https://openreview.net/forum?id=FdggkQpSHq}

@@ -51,7 +51,7 @@ try {
   const citationFile = await context.request.get("http://127.0.0.1:4173/assets/colvr.bib");
   const normalizeNewlines = text => text.replace(/\r\n/g, "\n").trim();
   assert(normalizeNewlines(copiedCitation)===normalizeNewlines(await citationFile.text()),"Copied and downloaded BibTeX match");
-  assert(copiedCitation.includes("@inproceedings{ding2026colvr") && copiedCitation.includes("author  = {Ding, Ziyang") && copiedCitation.includes("booktitle = {The Fortieth Annual Conference") && copiedCitation.includes("https://openreview.net/forum?id=FdggkQpSHq"),"Conference citation metadata");
+  assert(copiedCitation.includes("@inproceedings{ding2026colvr") && copiedCitation.includes("author = {Ziyang Ding and Linjian Meng and Yiming Wu and Yuhan Li and Yuhao Liu and Zhen Zhao}") && copiedCitation.includes("booktitle = {The Fortieth Annual Conference") && copiedCitation.includes("https://openreview.net/forum?id=FdggkQpSHq"),"Conference citation metadata");
   const requiredLinks=["https://arxiv.org/abs/2605.08802","https://github.com/Oscar-dzy/CoLVR/tree/main","https://huggingface.co/collections/Oscar-dzy/colvr-models","https://huggingface.co/datasets/Oscar-dzy/CoLVR-datasets"];
   for(const url of requiredLinks)assert(await page.locator(`a[href="${url}"]`).count()>0,`Resource link: ${url}`);
   const localResources=await page.evaluate(()=>[...new Set([...document.querySelectorAll("[src],a[href],link[href]")].map(el=>el.getAttribute("src")||el.getAttribute("href")).filter(url=>url&&!/^(https?:|mailto:|#)/.test(url)))]);
